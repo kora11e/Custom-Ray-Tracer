@@ -1,39 +1,24 @@
-#include <cstdlib>
+#include <iostream>
 #include <cstdio>
-#include <iostream> 
-
-using namespace std;
-
-typedef float Point[3];
+#include "color.h"
+#include "Vector3.h"
 
 int main()
 {
-    int x;
+    //image data
+    int image_width = 256;
+    int image_height = 256;
 
-    Point corners[8] = {
-         { 1, -1, -5},
-         { 1, -1, -3},
-         { 1,  1, -5},
-         { 1,  1, -3},
-         {-1, -1, -5},
-         {-1, -1, -3},
-         {-1,  1, -5},
-         {-1,  1, -3}
-    };
+    //Render
+    printf("%d", image_width);
+    printf("%d", image_height);
 
-    const unsigned int image_width = 512, image_height = 512;
-
-    for (int i = 0; i < 8; ++i) {
-        // Divide the x and y coordinates by the z coordinate to 
-        // project the point onto the canvas
-        float x_proj = corners[i][0] / -corners[i][2];
-        float y_proj = corners[i][1] / -corners[i][2];
-        float x_proj_remap = (1 + x_proj) / 2;
-        float y_proj_remap = (1 + y_proj) / 2;
-        float x_proj_pix = x_proj_remap * image_width;
-        float y_proj_pix = y_proj_remap * image_height;
-        printf("Corner: %d x:%f y:%f\n", i, x_proj_pix, y_proj_pix);
+    for (int j = 0; j < image_height; ++j) {
+        std::clog << "\rScanlines remaining: " << (image_height - j) << ' ' << std::flush;
+        for (int i = 0; i < image_width; ++i) {
+            auto pixel_color = color(double(i) / (image_width - 1), double(j) / (image_height - 1), 0);
+            write_color(std::cout, pixel_color);
+        }
     }
-    cin >> x;
-    return 0;
+    std::clog << "\rDone.                 \n";
 }
