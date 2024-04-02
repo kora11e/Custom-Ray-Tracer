@@ -1,17 +1,36 @@
-#include "rtweekend.h"
+#include "color.h"
+#include "ray.h"
+#include "Vector3.h"
 #include "hittable.h"
 #include "hittable_list.h"
-#include "Sphere.h"
+#include "sphere.h"
+#include "rtweekend.h"
+#include "camera.h"
+#include "material.h"
+
+
+#include <cstdlib>
 #include <iostream>
-#include <cstdio>
-#include "color.h"
-#include "Ray.h"
-#include "Vector3.h"
+
+double hit_sphere(const point3& center, double radius, const ray& r) {
+    vec3 oc = r.origin() - center;
+    auto a = r.direction().length_squared();
+    auto half_b = dot(oc, r.direction());
+    auto c = oc.length_squared() - radius * radius;
+    auto discriminant = half_b * half_b - a * c;
+    
+    if (discriminant < 0) {
+        return -1.0;
+    }
+    else {
+        return (-half_b - sqrt(discriminant)) / a;
+    }
+}
 
 color ray_color(const ray& r, const hittable& world) {
     hit_record rec;
-    if (world.hit(r, 0, infinity, rec)) {
-        return 0.5 * (rec.normal + color(1,1,1));
+    if (world.hit(r, interval(0, infinity), rec)) {
+        return 0.5 * (rec.normal + color(1, 1, 1));
     }
 
     vec3 unit_direction = unit_vector(r.direction());
@@ -19,17 +38,36 @@ color ray_color(const ray& r, const hittable& world) {
     return (1.0 - a) * color(1.0, 1.0, 1.0) + a * color(0.5, 0.7, 1.0);
 }
 
-int main()
-{
-    //Image aspect
+int main() {
+
+    // Image
+    camera cam;
+
     auto aspect_ratio = 16.0 / 9.0;
     int image_width = 400;
+    cam.samples_per_pixel = 100;
 
-    //image data
-    int image_width = static_cast<int>(image_width / aspect_ratio);
-    int image_height = (image_height < 1) ? 1 : image_height;
 
-    //Camera
+    // Calculate the image height, and ensure that it's at least 1.
+    int image_height = static_cast<int>(image_width / aspect_ratio);
+    image_height = (image_height < 1) ? 1 : image_height;
+
+    // World
+
+    hittable_list world;
+
+    auto material_ground = make_shared<lambertian>(color(0.8, 0.8, 0.0));
+    auto material_center = make_shared<lambertian>(color(0.7, 0.3, 0.3));
+    auto material_left = make_shared<metal>(color(0.8, 0.8, 0.8));
+    auto material_right = make_shared<metal>(color(0.8, 0.6, 0.2));
+
+    world.add(make_shared<sphere>(point3(0.0, -100.5, -1.0), 100.0, material_ground));
+    world.add(make_shared<sphere>(point3(0.0, 0.0, -1.0), 0.5, material_center));
+    world.add(make_shared<sphere>(point3(-1.0, 0.0, -1.0), 0.5, material_left));
+    world.add(make_shared<sphere>(point3(1.0, 0.0, -1.0), 0.5, material_right));
+
+    // Camera
+
     auto focal_length = 1.0;
     auto viewport_height = 2.0;
     auto viewport_width = viewport_height * (static_cast<double>(image_width) / image_height);
@@ -44,21 +82,13 @@ int main()
     auto pixel_delta_v = viewport_v / image_height;
 
     // Calculate the location of the upper left pixel.
-    auto viewport_upper_left = camera_center - vec3(0, 0, focal_length) - viewport_u / 2 - viewport_v / 2;
+    auto viewport_upper_left = camera_center
+        - vec3(0, 0, focal_length) - viewport_u / 2 - viewport_v / 2;
     auto pixel00_loc = viewport_upper_left + 0.5 * (pixel_delta_u + pixel_delta_v);
 
-    //World
-    hittable_list world;
+    // Render
 
-    world.add(make_shared<sphere>(point3(0, 0, -1), 0.5));
-    world.add(make_shared<sphere>(point3(0, 100.5, -1), 100));
-
-    //Render
-    printf("%d", image_width);
-    printf("%d", image_height);
-
-    auto viewport_height = 2.0;
-    auto viewport_width = viewport_height * (static_cast<double>(image_width) / image_height);
+    std::cout << "P3\n" << image_width << " " << image_height << "\n255\n";
 
     for (int j = 0; j < image_height; ++j) {
         std::clog << "\rScanlines remaining: " << (image_height - j) << ' ' << std::flush;
@@ -71,5 +101,6 @@ int main()
             write_color(std::cout, pixel_color);
         }
     }
+
     std::clog << "\rDone.                 \n";
 }

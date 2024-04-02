@@ -1,2 +1,21 @@
 ﻿  main.cpp
-  Ray Tracing Project.vcxproj -> C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\Debug\Ray Tracing Project.exe
+C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\interval.h(11,23): error C2065: 'infinity': undeclared identifier
+C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\interval.h(11,39): error C2065: 'infinity': undeclared identifier
+C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\interval.h(32,30): error C2065: 'infinity': undeclared identifier
+C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\interval.h(32,41): error C2065: 'infinity': undeclared identifier
+C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\interval.h(33,33): error C2065: 'infinity': undeclared identifier
+C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\interval.h(33,44): error C2065: 'infinity': undeclared identifier
+C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\Vector3.h(51,21): error C3861: 'random_double': identifier not found
+C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\Vector3.h(51,38): error C3861: 'random_double': identifier not found
+C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\Vector3.h(51,55): error C3861: 'random_double': identifier not found
+C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\Vector3.h(55,21): error C3861: 'random_double': identifier not found
+C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\Vector3.h(55,46): error C3861: 'random_double': identifier not found
+C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\Vector3.h(55,71): error C3861: 'random_double': identifier not found
+C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\main.cpp(32,9): error C2374: 'image_width': redefinition; multiple initialization
+C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\main.cpp(29): message : see declaration of 'image_width'
+C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\main.cpp(71,10): error C2371: 'viewport_height': redefinition; different basic types
+C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\main.cpp(37): message : see declaration of 'viewport_height'
+C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\main.cpp(72,10): error C2371: 'viewport_width': redefinition; different basic types
+C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\main.cpp(38): message : see declaration of 'viewport_width'
+C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\main.cpp(81,47): error C2660: 'write_color': function does not take 2 arguments
+C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\color.h(10,6): message : see declaration of 'write_color'

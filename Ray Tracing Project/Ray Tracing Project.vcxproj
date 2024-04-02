@@ -142,9 +142,12 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Camera.h" />
     <ClInclude Include="Color.h" />
     <ClInclude Include="hittable.h" />
     <ClInclude Include="hittable_list.h" />
+    <ClInclude Include="Interval.h" />
+    <ClInclude Include="Material.h" />
     <ClInclude Include="Ray.h" />
     <ClInclude Include="rtweekend.h" />
     <ClInclude Include="Sphere.h" />
