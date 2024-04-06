@@ -10,12 +10,19 @@ class sphere : public hittable {
 public:
     //stationary sphere
     sphere(point3 _center, double _radius, shared_ptr<material> _material)
-        : center(_center), radius(_radius), mat(_material) {}
+        : center1(_center), radius(_radius), mat(_material), is_moving(false) {
+        auto rvec = vec3(radius, radius, radius);
+        bbox = aabb(center1 - rvec, center1 + rvec);
+    }
     
     //moving sphere
+    sphere(point3 _center1, point3 _center2, double _radius, shared_ptr<material> _material)
+        : center1(_center1), radius(_radius), mat(_material), is_moving(true) {
+        center_vec = _center2 - _center1; 
+    }
 
     bool hit(const ray& r, interval ray_t, hit_record& rec) const override {
-        //point3 center = is_moving ? sphere_center(r.time()) : center1;
+        point3 center = is_moving ? sphere_center(r.time()) : center1;
         vec3 oc = r.origin() - center;
         auto a = r.direction().length_squared();
         auto half_b = dot(oc, r.direction());
@@ -44,11 +51,16 @@ public:
     }
 
 private:
-    point3 center;
+    point3 center1;
     double radius;
     shared_ptr<material> mat;
-    //bool is_moving;
-    //vec3 center_vec;
+    bool is_moving;
+    vec3 center_vec;
+    aabb bbox;
+
+    point3 center(double time) const {
+        return center0 + time * center_vec;
+    }
 };
 
 #endif
