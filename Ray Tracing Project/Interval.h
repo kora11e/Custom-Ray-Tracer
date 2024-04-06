@@ -1,9 +1,6 @@
 #ifndef INTERVAL_H
 #define INTERVAL_H
 
-#include <iostream>
-#include <limits>
-
 class interval {
 public:
     double min, max;
@@ -11,6 +8,15 @@ public:
     interval() : min(+infinity), max(-infinity) {} // Default interval is empty
 
     interval(double _min, double _max) : min(_min), max(_max) {}
+
+    double size() const {
+        return max - min;
+    }
+
+    interval expand(double delta) const {
+        auto padding = delta / 2;
+        return interval(min - padding, max + padding);
+    }
 
     bool contains(double x) const {
         return min <= x && x <= max;
@@ -29,7 +35,7 @@ public:
     static const interval empty, universe;
 };
 
-const static interval empty(+infinity, -infinity);
-const static interval universe(-infinity, +infinity);
+const interval interval::empty(+infinity, -infinity);
+const interval interval::universe(-infinity, +infinity);
 
 #endif

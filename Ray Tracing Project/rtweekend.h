@@ -5,9 +5,6 @@
 #include <limits>
 #include <memory>
 #include <cstdlib>
-#include "interval.h"
-#include "ray.h"
-#include "Vector3.h"
 
 // Usings
 
@@ -36,7 +33,7 @@ inline double random_double(double min, double max) {
 }
 
 // Common Headers
-
+#include "interval.h"
 #include "ray.h"
 #include "Vector3.h"
 
