@@ -1,20 +1,73 @@
 ﻿  main.cc
-C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\Vector3.h(68,21): error C3861: 'random_double': identifier not found
-C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\Vector3.h(68,38): error C3861: 'random_double': identifier not found
-C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\Vector3.h(68,55): error C3861: 'random_double': identifier not found
-C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\Vector3.h(72,21): error C3861: 'random_double': identifier not found
-C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\Vector3.h(72,46): error C3861: 'random_double': identifier not found
-C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\Vector3.h(72,71): error C3861: 'random_double': identifier not found
-C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\Vector3.h(128,23): error C3861: 'random_double': identifier not found
-C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\Vector3.h(128,45): error C3861: 'random_double': identifier not found
-C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\Vector3.h(129,12): error C3536: 'p': cannot be used before it is initialized
-C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\Vector3.h(130,21): error C2440: 'return': cannot convert from 'int' to 'vec3'
-C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\Vector3.h(130,21): message : No constructor could take the source type, or constructor overload resolution was ambiguous
-C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\color.h(42,27): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\color.h(42,27): error C2146: syntax error: missing ';' before identifier 'intensity'
-C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\color.h(42,27): error C3861: 'intensity': identifier not found
-C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\color.h(43,35): error C2065: 'intensity': undeclared identifier
-C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\color.h(44,35): error C2065: 'intensity': undeclared identifier
-C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\color.h(45,35): error C2065: 'intensity': undeclared identifier
+C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\ray.h(10,8): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\ray.h(10,21): error C2143: syntax error: missing ',' before '&'
+C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\ray.h(12,8): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\ray.h(12,21): error C2143: syntax error: missing ',' before '&'
+C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\ray.h(12,8): error C2535: 'ray::ray(const int)': member function already defined or declared
+C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\ray.h(10): message : see declaration of 'ray::ray'
+C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\ray.h(14,12): error C3646: 'origin': unknown override specifier
+C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\ray.h(14,18): error C2059: syntax error: '('
+C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\ray.h(14,27): error C2334: unexpected token(s) preceding '{'; skipping apparent function body
+C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\ray.h(15,10): error C3646: 'direction': unknown override specifier
+C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\ray.h(15,19): error C2059: syntax error: '('
+C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\ray.h(15,28): error C2334: unexpected token(s) preceding '{'; skipping apparent function body
+C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\ray.h(18,12): error C3646: 'at': unknown override specifier
+C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\ray.h(18,14): error C2059: syntax error: '('
+C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\ray.h(18,31): error C2334: unexpected token(s) preceding '{'; skipping apparent function body
+C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\ray.h(23,12): error C3646: 'orig': unknown override specifier
+C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\ray.h(23,16): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\ray.h(24,10): error C3646: 'dir': unknown override specifier
+C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\ray.h(24,13): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\ray.h(10,61): error C2065: 'origin': undeclared identifier
+C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\ray.h(10,74): error C2065: 'direction': undeclared identifier
+C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\ray.h(10,56): error C2614: 'ray': illegal member initialization: 'orig' is not a base or member
+C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\ray.h(10,70): error C2614: 'ray': illegal member initialization: 'dir' is not a base or member
+C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\ray.h(12,80): error C2065: 'origin': undeclared identifier
+C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\ray.h(12,93): error C2065: 'direction': undeclared identifier
+C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\ray.h(12,8): error C3867: 'ray::time': non-standard syntax; use '&' to create a pointer to member
+C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\ray.h(12,75): error C2614: 'ray': illegal member initialization: 'orig' is not a base or member
+C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\ray.h(12,89): error C2614: 'ray': illegal member initialization: 'dir' is not a base or member
+C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\aabb.h(21,1): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'interval'
+C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\aabb.h(21,1): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\aabb.h(22,1): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'interval'
+C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\aabb.h(22,1): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\aabb.h(23,1): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'interval'
+C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\aabb.h(23,1): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\aabb.h(34,22): error C2039: 'direction': is not a member of 'ray'
+C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\ray.h(6): message : see declaration of 'ray'
+C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\aabb.h(35,18): error C2039: 'origin': is not a member of 'ray'
+C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\ray.h(6): message : see declaration of 'ray'
+C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\aabb.h(37,1): error C3536: 'orig': cannot be used before it is initialized
+C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\aabb.h(37,1): error C3536: 'invD': cannot be used before it is initialized
+C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\hittable.h(18,28): error C2039: 'direction': is not a member of 'ray'
+C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\ray.h(6): message : see declaration of 'ray'
+C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\sphere.h(30,37): error C3861: 'sphere_center': identifier not found
+C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\sphere.h(31,21): error C2039: 'origin': is not a member of 'ray'
+C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\ray.h(6): message : see declaration of 'ray'
+C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\sphere.h(32,20): error C2039: 'direction': is not a member of 'ray'
+C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\ray.h(6): message : see declaration of 'ray'
+C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\sphere.h(33,33): error C2039: 'direction': is not a member of 'ray'
+C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\ray.h(6): message : see declaration of 'ray'
+C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\sphere.h(33,1): error C2660: 'dot': function does not take 1 arguments
+C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\Vector3.h(101,15): message : see declaration of 'dot'
+C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\sphere.h(36,1): error C3536: 'half_b': cannot be used before it is initialized
+C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\sphere.h(36,1): error C3536: 'a': cannot be used before it is initialized
+C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\sphere.h(49,19): error C2039: 'at': is not a member of 'ray'
+C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\ray.h(6): message : see declaration of 'ray'
+C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\sphere.h(68,16): error C2065: 'center0': undeclared identifier
+C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\material.h(27,1): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'ray'
+C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\material.h(27,1): message : No constructor could take the source type, or constructor overload resolution was ambiguous
 C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\material.h(38,45): error C2065: 'f': undeclared identifier
 C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\material.h(38,53): error C2065: 'f': undeclared identifier
+C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\material.h(42,51): error C2039: 'direction': is not a member of 'ray'
+C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\ray.h(6): message : see declaration of 'ray'
+C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\material.h(43,1): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'ray'
+C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\material.h(43,1): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\material.h(62,48): error C2039: 'direction': is not a member of 'ray'
+C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\ray.h(6): message : see declaration of 'ray'
+C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\material.h(74,1): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'ray'
+C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\material.h(74,1): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\camera.h(114,1): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'ray'
+C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\camera.h(114,1): message : No constructor could take the source type, or constructor overload resolution was ambiguous
+C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\camera.h(151,45): error C2039: 'direction': is not a member of 'ray'
+C:\Users\X\Desktop\Custom-Ray-Tracer\Ray Tracing Project\ray.h(6): message : see declaration of 'ray'

@@ -142,6 +142,8 @@
     <ClCompile Include="main.cc" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="aabb.h" />
+    <ClInclude Include="bvh.h" />
     <ClInclude Include="Camera.h" />
     <ClInclude Include="Color.h" />
     <ClInclude Include="hittable.h" />
@@ -151,6 +153,7 @@
     <ClInclude Include="Ray.h" />
     <ClInclude Include="rtweekend.h" />
     <ClInclude Include="Sphere.h" />
+    <ClInclude Include="texture.h" />
     <ClInclude Include="Vector3.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
